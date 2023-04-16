@@ -1,0 +1,1 @@
+GRANT ALL PRIVILEGES ON teste.* TO 'user'@'192.168.16.3' IDENTIFIED BY 'root';
