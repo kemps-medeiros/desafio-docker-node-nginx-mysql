@@ -31,8 +31,7 @@ app.get('/', async (req, res) => {
 
     peopleNames = people.map(person => `<li>${person.name}</li>`).join()
 
-    let body = `<h1>E o ganhador da caneca ééééé´ o....</h1>`
-    body += `<ul>${peopleNames}</ul>`
+    body += `${peopleNames}`
 
     res.send(body)
   });
