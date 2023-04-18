@@ -29,11 +29,11 @@ app.get('/', async (req, res) => {
   db.query('SELECT name FROM people', (error, people, _fields) => {
     if (error) throw error;
 
-    peopleNames = people.map(person => `<li>${person.name}</li>`).join()
-
-    body += `${peopleNames}`
-
-    res.send(body)
+    peopleNames = people.map(person => person.name)
+  
+    const name = peopleNames[0]
+    
+    res.send(name)
   });
 });
 
